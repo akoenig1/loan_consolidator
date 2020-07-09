@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
         <script src="add_loan.js"></script>
+        <script src="consolidate.js"></script>
         <title>Loan Consolidation Calculator</title>
     </head>
     <body>
@@ -22,9 +23,15 @@
             <button id="add-loan-button" onclick="addLoan()">+</button>
         </section>
         <section id="output">
+            <button id=calculate" onclick="consolidate()">Calculate</button>
             <!--Total Loan Value-->
-            
+            <div class="output-text">
+                <p id="total-loan-value"></p>
+            </div>
             <!--Total Loan Interest Rate-->
+            <div class="output-text">
+                <p id="consolidated-interest-rate"></p>
+            </div>
         </section>
     </body>
 </html>
