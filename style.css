@@ -1,0 +1,260 @@
+html {
+    font-family: Tahoma, Geneva, sans-serif;
+}
+
+body {
+    background-color: #feffff;
+}
+
+/* Nav Bar */
+
+
+/* Header */
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;  
+
+    margin-top: 70px;  
+    margin-bottom: 30px;
+}
+
+/* Input */
+
+.input-container {
+    font-size: 24px;
+}
+
+
+#input {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    clear: both;
+    width: 70%;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.loan-info {
+    display: flex;
+    width: 100%;
+    clear: both;
+
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+    justify-content: center;
+}
+
+.loan-info label {
+    width: 80px;
+}
+
+.loan-info input:valid {
+    font-size: 24px;
+    font-weight: 300;
+    border-radius: 2px;
+    margin: 0;
+    border: none;
+    border-bottom: solid 1px #379683;
+    width: 53%;
+    background: rgba(0, 0, 0, 0);
+    overflow-x: hidden;
+}
+
+.loan-info input:invalid {
+    font-size: 24px;
+    font-weight: 300;
+    border-radius: 2px;
+    margin: 0;
+    border: none;
+    border-bottom: solid 1px red;
+    width: 10%;
+    background: rgba(0, 0, 0, 0);
+    overflow-x: hidden;
+}
+
+.loan-info input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.loan-info input:focus {
+    outline: 0;
+    width: 53%;
+    -webkit-transition: width 0.4s ease;
+}
+
+.loan-info input: {
+    outline: 0;
+    width: 53%;
+}
+
+/* Underline and placeholder */
+.input-container input + .input-container label {
+    width: 320px;
+    display: block;
+    position: relative;
+    white-space: nowrap;
+    padding: 0;
+    margin: 0;
+    width: 10%;
+    border-top: 1px solid #379683;
+    -webkit-transition: width 0.4s ease;
+    transition: width 0.4s ease;
+    height: 0px;
+}
+
+#loan-amount {
+    margin-left: 0;
+    margin-right: 40px;
+}
+
+#loan-interest-rate {
+    margin-left: 10px;
+}
+
+.remove-loan-button {
+    display: block;
+    margin-left: 20px;
+    color: #05386b;
+    background-color: #feffff;
+    border: solid 2px #05386b;
+    border-radius: 50%;
+    font-size: 20px;
+    padding-top: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 2px;
+}
+
+.remove-loan-button:hover {
+    cursor: pointer;
+}
+
+.remove-loan-button:focus {
+    outline: none;
+}
+
+#add-loan-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: #05386b;
+    background-color: #feffff;
+    border: solid 2px #05386b;
+    border-radius: 50%;
+    font-size: 20px;
+    padding-top: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 2px;
+}
+
+#add-loan-button:hover {
+    cursor: pointer;
+}
+
+#add-loan-button:focus {
+    outline: none;
+}
+
+/* Output */
+
+#output {
+    align-items: center;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#calculate {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    padding-top: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 8px;
+
+    font-size: 20px;
+    color: #feffff;
+
+    background-color: #5cdb95;
+
+    border: none;
+    border-radius: 2px;
+    
+}
+
+#calculate:hover {
+    cursor: pointer;
+
+    background-color: #8ee4af;
+
+    -webkit-transition: 0.2s;
+}
+
+.output-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.output-text {
+    display: inline-block;
+    width: 180px;
+    vertical-align: middle;
+
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 5px;
+
+    font-size: 20px;
+
+    border: solid rgb(104, 103, 103) 1px;
+    border-radius: 2px;
+}
+
+.dollar-sign {
+    display: inline-flex;
+}
+
+#total-loan-value {
+    display: inline-flex;
+    width: 150px;
+}
+
+
+#consolidated-interest-rate {
+    display: inline-flex;
+    width: 150px;
+}
+
+.percent-sign {
+    display: inline-flex;
+    float: right;
+}
+
+.input-container .percent-sign {
+    margin-top: 8px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    height: 30px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    display: block;
+    text-align: center;
+}

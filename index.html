@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
         <script src="add_loan.js"></script>
         <script src="consolidate.js"></script>
@@ -11,27 +12,39 @@
         <h1>Loan Consolidation Calculator</h1>
         <section id="input">
             <div class="loan-info">
-                <!--Loan No.-->
-                <h2>1</h2>
                 <!--Loan Amount-->
-                <label for="loan-amount">Loan Amount</label>
-                <input id="loan-amount" type="number">
+                <div class="input-container" id="loan-amount-container">
+                    <label for="loan-amount"><span>Loan Amount</span></label>
+                    <p class="dollar-sign">$</p>
+                    <input id="loan-amount" type="number" required>
+                </div>
                 <!--Loan Interest Rate-->
-                <label for="loan-interest-rate">Interest Rate</label>
-                <input id="loan-interest-rate" type="number">
+                <div class="input-container">
+                    <label for="loan-interest-rate"><span>Interest Rate</span></label>
+                    <input id="loan-interest-rate" type="text" required pattern="^\d*\.?\d*$">
+                    <p class="percent-sign">%</p>
+                </div>
+                <button class="remove-loan-button">-</button>
             </div>
             <button id="add-loan-button" onclick="addLoan()">+</button>
         </section>
         <section id="output">
-            <button id=calculate" onclick="consolidate()">Calculate</button>
-            <!--Total Loan Value-->
-            <div class="output-text">
-                <p id="total-loan-value"></p>
-            </div>
-            <!--Total Loan Interest Rate-->
-            <div class="output-text">
-                <p id="consolidated-interest-rate"></p>
+            <button id="calculate" onclick="consolidate()">Calculate</button>
+            <div class="output-container">
+                <!--Total Loan Value-->
+                <div class="output-text">
+                    <p class="dollar-sign">$</p>
+                    <p id="total-loan-value"></p>
+                </div>
+                <!--Total Loan Interest Rate-->
+                <div class="output-text">
+                    <p id="consolidated-interest-rate"></p>
+                    <p class="percent-sign">%</p>
+                </div>
             </div>
         </section>
+        <footer>
+            <p>©2020 by Alex Koenig</p>
+        </footer>
     </body>
 </html>

@@ -25,8 +25,6 @@ function consolidate () {
     } 
 
     // Output calculated values
-    document.getElementById("total-loan-value").textContent = total_loan_value;
-    console.log(total_loan_value);
-    document.getElementById("consolidated-interest-rate").textContent = consolidated_interest_rate;
-    console.log(consolidated_interest_rate);
+    document.getElementById("total-loan-value").textContent = total_loan_value.toFixed(2);
+    document.getElementById("consolidated-interest-rate").textContent = consolidated_interest_rate.toFixed(3);
 }
